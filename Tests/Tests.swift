@@ -2,8 +2,12 @@ import Metal
 import MetalZoon
 import Testing
 
-@Test func defaultMetalDevice() {
+@Test func defaults() throws {
   let _: MTLDevice = .default
+  let _: MTLLibrary = try .default(bundle: .module)
+
+  // The following does not seem to be testable using a Swift Package.
+  // let _: MTLLibrary = .default
 }
 
 import SwiftUI
