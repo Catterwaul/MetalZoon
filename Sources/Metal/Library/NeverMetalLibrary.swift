@@ -12,12 +12,12 @@ import Metal
 public final class NeverMetalLibrary: NSObject & MTLLibrary { }
 
 public extension MTLLibrary where Self == NeverMetalLibrary {
-  static var `default`: any MTLLibrary {
+  @inlinable static var `default`: any MTLLibrary {
     NeverMetalDevice.default.makeDefaultLibrary()!
   }
 
   /// Creates a Metal library instance that contains the functions in a bundle’s default Metal library.
-  static func `default`(bundle: Bundle) throws -> any MTLLibrary {
+  @inlinable static func `default`(bundle: Bundle) throws -> any MTLLibrary {
     try NeverMetalDevice.default.makeDefaultLibrary(bundle: bundle)
   }
 }
