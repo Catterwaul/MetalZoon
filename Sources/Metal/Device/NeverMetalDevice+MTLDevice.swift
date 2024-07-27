@@ -1,6 +1,5 @@
 import Metal
 
-@available(macOS 14, iOS 17, tvOS 17, *)
 public extension NeverMetalDevice {
   func makeRenderPipelineState(tileDescriptor descriptor: MTLTileRenderPipelineDescriptor, options: MTLPipelineOption) async throws -> (any MTLRenderPipelineState, MTLRenderPipelineReflection?) {
     fatalError()
@@ -85,9 +84,6 @@ public extension NeverMetalDevice {
   var name: String { fatalError() }
 
   var registryID: UInt64 { fatalError() }
-
-  @available(macOS 14.0, *)
-  var architecture: MTLArchitecture { fatalError() }
 
   var maxThreadsPerThreadgroup: MTLSize { fatalError() }
 
@@ -342,29 +338,6 @@ public extension NeverMetalDevice {
   func makeCounterSampleBuffer(descriptor: MTLCounterSampleBufferDescriptor) throws -> any MTLCounterSampleBuffer {
     fatalError()
   }
-}
-
-@available(macOS 15, iOS 18, tvOS 18, *) extension NeverMetalDevice {
-  public func makeResidencySet(descriptor desc: MTLResidencySetDescriptor) throws -> any MTLResidencySet {
-    fatalError()
-  }
-
-  public func makeLogState(descriptor: MTLLogStateDescriptor) throws -> any MTLLogState {
-    fatalError()
-  }
-
-  public func makeCommandQueue(descriptor: MTLCommandQueueDescriptor) -> (any MTLCommandQueue)? {
-    fatalError()
-  }
-}
-
-#if os(macOS)
-public extension NeverMetalDevice {
-  var isDepth24Stencil8PixelFormatSupported: Bool { fatalError() }
-  var isHeadless: Bool { fatalError() }
-  var isLowPower: Bool { fatalError() }
-  var isRemovable: Bool { fatalError() }
-  var location: MTLDeviceLocation { fatalError() }
 
   func makeSharedTexture(handle sharedHandle: MTLSharedTextureHandle) -> (any MTLTexture)? {
     fatalError()
@@ -389,6 +362,31 @@ public extension NeverMetalDevice {
   func makeIOFileHandle(url: URL, compressionMethod: MTLIOCompressionMethod) throws -> any MTLIOFileHandle {
     fatalError()
   }
+
+  var architecture: MTLArchitecture { fatalError() }
+}
+
+@available(macOS 15, iOS 18, tvOS 18, *) public extension  NeverMetalDevice {
+  func makeResidencySet(descriptor desc: MTLResidencySetDescriptor) throws -> any MTLResidencySet {
+    fatalError()
+  }
+
+  func makeLogState(descriptor: MTLLogStateDescriptor) throws -> any MTLLogState {
+    fatalError()
+  }
+
+  func makeCommandQueue(descriptor: MTLCommandQueueDescriptor) -> (any MTLCommandQueue)? {
+    fatalError()
+  }
+}
+
+#if os(macOS)
+public extension NeverMetalDevice {
+  var isDepth24Stencil8PixelFormatSupported: Bool { fatalError() }
+  var isHeadless: Bool { fatalError() }
+  var isLowPower: Bool { fatalError() }
+  var isRemovable: Bool { fatalError() }
+  var location: MTLDeviceLocation { fatalError() }
 }
 #endif
 

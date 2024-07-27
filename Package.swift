@@ -6,7 +6,7 @@ let name = "MetalZoon"
 
 _ = Package(
   name: name,
-  platforms: [.iOS(.v17), .tvOS(.v17), .macOS(.v14)],
+  platforms: [.iOS(.v17), .macOS(.v14)],
   products: [.library(name: name, targets: [name])],
   dependencies: [
     Dependency.apple(repositoryName: "async-algorithms").package,
