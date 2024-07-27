@@ -1,6 +1,15 @@
 {
-  "originHash" : "86d03da2ff068e7ebf1952bcf224f6dbdc2cf8394c2ba5a40dbb68256de4d168",
+  "originHash" : "59bb73be80714ec32d4b90326cc876fad78d005a4ab2c0ba110049ac5e979510",
   "pins" : [
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms",
+      "state" : {
+        "branch" : "main",
+        "revision" : "09dc5e4354e3d7191bbe361758392687c051eb07"
+      }
+    },
     {
       "identity" : "swift-async-algorithms",
       "kind" : "remoteSourceControl",
@@ -35,6 +44,33 @@
       "state" : {
         "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b5adc8c39bfd412f0b8c6f15c21a2df8e04aa058"
+      }
+    },
+    {
+      "identity" : "thrappture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/Thrappture",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9406628331a72335395e49b4a7029098aa163f97"
+      }
+    },
+    {
+      "identity" : "tuplay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/Tuplay",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9193b1611664565788ffc3ae3a94c9b3db942563"
       }
     }
   ],

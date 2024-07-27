@@ -8,12 +8,12 @@ _ = Package(
   name: name,
   platforms: [.iOS(.v17), .macOS(.v14)],
   products: [.library(name: name, targets: [name])],
-  dependencies: [
-    Dependency.apple(repositoryName: "async-algorithms").package,
-    Dependency.swift(repositoryName: "docc-plugin").package
-  ],
+  dependencies: dependencies.map(\.package),
   targets: [
-    .target(name: name),
+    .target(
+      name: name,
+      dependencies: dependencies.dropFirst(2).map(\.product)
+    ),
     .testTarget(
       name: name + ".Tests",
       dependencies: [
@@ -26,6 +26,15 @@ _ = Package(
 )
 
 // MARK: - Dependency
+
+nonisolated var dependencies: [Dependency]  {
+  [ .swift(repositoryName: "docc-plugin"),
+    .apple(repositoryName: "async-algorithms"),
+    .apple(repositoryName: "algorithms"),
+    .apple(repositoryName: "numerics"),
+    .catterwaul(name: "Tuplé", repositoryName: "Tuplay")
+  ]
+}
 
 struct Dependency {
   let package: Package.Dependency
@@ -45,15 +54,20 @@ extension Dependency {
     )
   }
 
-  static func catterwaul(name: String, repositoryName: String? = nil) -> Self {
-    .init(organization: "Catterwaul", name: name, repositoryName: repositoryName ?? name)
+  static func catterwaul(name: String, repositoryName: String? = nil, branch: String? = nil) -> Self {
+    .init(
+      organization: "Catterwaul",
+      name: name,
+      repositoryName: repositoryName ?? name,
+      branch: branch
+    )
   }
 
-  private init(organization: String, name: String, repositoryName: String) {
+  private init(organization: String, name: String, repositoryName: String, branch: String? = nil) {
     self.init(
       package: .package(
         url: "https://github.com/\(organization)/\(repositoryName)",
-        branch: "main"
+        branch: branch ?? "main"
       ),
       product: .product(name: name, package: repositoryName)
     )
