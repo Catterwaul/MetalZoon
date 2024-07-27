@@ -1,6 +1,15 @@
 {
-  "originHash" : "59bb73be80714ec32d4b90326cc876fad78d005a4ab2c0ba110049ac5e979510",
+  "originHash" : "b9596339dc34fbff532948177bcfe2674b10660e4f8ce9e3856352ea06f41741",
   "pins" : [
+    {
+      "identity" : "simdson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/SIMDson",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fb7be186d2bc204c00038d1e6fb56ff23911e0cc"
+      }
+    },
     {
       "identity" : "swift-algorithms",
       "kind" : "remoteSourceControl",

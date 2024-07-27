@@ -32,6 +32,7 @@ nonisolated var dependencies: [Dependency]  {
     .apple(repositoryName: "async-algorithms"),
     .apple(repositoryName: "algorithms"),
     .apple(repositoryName: "numerics"),
+    .catterwaul(name: "SIMDson"),
     .catterwaul(name: "Tuplé", repositoryName: "Tuplay")
   ]
 }
