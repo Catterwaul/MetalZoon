@@ -1,4 +1,4 @@
-import Metal
+import protocol Metal.MTLCommandBuffer
 
 public extension MTLCommandBuffer {
   /// Wait until this command buffer is scheduled for execution on the GPU.
