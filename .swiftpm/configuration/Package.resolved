@@ -7,7 +7,7 @@
       "location" : "https://github.com/Catterwaul/SIMDson",
       "state" : {
         "branch" : "main",
-        "revision" : "fb7be186d2bc204c00038d1e6fb56ff23911e0cc"
+        "revision" : "79bf0260db2df3b6ce2626c8f8b92af58dfe7827"
       }
     },
     {
@@ -79,7 +79,7 @@
       "location" : "https://github.com/Catterwaul/Tuplay",
       "state" : {
         "branch" : "main",
-        "revision" : "9193b1611664565788ffc3ae3a94c9b3db942563"
+        "revision" : "424419c472c0887a3a58b3436d32f83c9fe15406"
       }
     }
   ],
