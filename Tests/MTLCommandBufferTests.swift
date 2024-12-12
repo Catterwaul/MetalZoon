@@ -3,7 +3,7 @@ import AsyncAlgorithms
 import MetalZoon
 import Testing
 
-@Suite private struct MTLCommandBufferTests {
+@Suite struct MTLCommandBufferTests {
   let device: MTLDevice = .default
 
   @Test func complete() async {
@@ -15,12 +15,12 @@ import Testing
     let string: String = await withTaskGroup(of: Character.self) { group in
       let buffer = device.makeCommandQueue()!.makeCommandBuffer()!
 
-      group.addTask {
+      group.addTask { @Sendable in
         await buffer.schedulingCompletion
         return "2"
       }
 
-      group.addTask {
+      group.addTask { @Sendable in
         await buffer.completion
         return "3"
       }
