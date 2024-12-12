@@ -13,14 +13,14 @@ public extension MTLRenderPipelineColorAttachmentDescriptor {
     destinationAlphaBlendFactor: MTLBlendFactor? = nil
   ) {
     self.init()
-    try? self.pixelFormat = pixelFormat.wrappedValue()
-    try? self.writeMask = writeMask.wrappedValue()
-    try? self.isBlendingEnabled = isBlendingEnabled.wrappedValue()
-    try? self.rgbBlendOperation = rgbBlendOperation.wrappedValue()
-    try? self.alphaBlendOperation = alphaBlendOperation.wrappedValue()
-    try? self.sourceRGBBlendFactor = sourceRGBBlendFactor.wrappedValue()
-    try? self.sourceAlphaBlendFactor = sourceAlphaBlendFactor.wrappedValue()
-    try? self.destinationRGBBlendFactor = destinationRGBBlendFactor.wrappedValue()
-    try? self.destinationAlphaBlendFactor = destinationAlphaBlendFactor.wrappedValue()
+    try? self.pixelFormat = pixelFormat.get()
+    try? self.writeMask = writeMask.get()
+    try? self.isBlendingEnabled = isBlendingEnabled.get()
+    try? self.rgbBlendOperation = rgbBlendOperation.get()
+    try? self.alphaBlendOperation = alphaBlendOperation.get()
+    try? self.sourceRGBBlendFactor = sourceRGBBlendFactor.get()
+    try? self.sourceAlphaBlendFactor = sourceAlphaBlendFactor.get()
+    try? self.destinationRGBBlendFactor = destinationRGBBlendFactor.get()
+    try? self.destinationAlphaBlendFactor = destinationAlphaBlendFactor.get()
   }
 }

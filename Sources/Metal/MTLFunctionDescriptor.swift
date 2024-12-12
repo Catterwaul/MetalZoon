@@ -1,4 +1,5 @@
 import Metal
+import Thrappture
 
 public extension MTLFunctionDescriptor {
   convenience init(
@@ -9,10 +10,10 @@ public extension MTLFunctionDescriptor {
     binaryArchives: [some MTLBinaryArchive]? = [any MTLBinaryArchive]?.none
   ) {
     self.init()
-    try? self.name = name.wrappedValue()
-    try? self.constantValues = constantValues.wrappedValue()
-    try? self.specializedName = specializedName.wrappedValue()
-    try? self.options = options.wrappedValue()
-    try? self.binaryArchives = binaryArchives.wrappedValue()
+    try? self.name = name.get()
+    try? self.constantValues = constantValues.get()
+    try? self.specializedName = specializedName.get()
+    try? self.options = options.get()
+    try? self.binaryArchives = binaryArchives.get()
   }
 }

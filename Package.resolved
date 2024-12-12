@@ -1,10 +1,46 @@
 {
-  "originHash" : "62c2f11c3e26b64c394c6ed03390b0f80634272ff5419ba9bf5fc22b267cd3f1",
+  "originHash" : "b9596339dc34fbff532948177bcfe2674b10660e4f8ce9e3856352ea06f41741",
   "pins" : [
+    {
+      "identity" : "simdson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/SIMDson",
+      "state" : {
+        "branch" : "main",
+        "revision" : "8256ba5a21cba7c202a200bd19629c3bf4db1c75"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms",
+      "state" : {
+        "branch" : "main",
+        "revision" : "34eec0dd27ba4b539fe01e61fac07c9227c65a63"
+      }
+    },
+    {
+      "identity" : "swift-async-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-async-algorithms",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4c3ea81f81f0a25d0470188459c6d4bf20cf2f97"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "671108c96644956dddcd89dd59c203dcdb36cec7",
+        "version" : "1.1.4"
+      }
+    },
     {
       "identity" : "swift-docc-plugin",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-docc-plugin",
+      "location" : "https://github.com/swiftlang/swift-docc-plugin",
       "state" : {
         "branch" : "main",
         "revision" : "3aad4aabc42835f09f600bb17070f6a11bc84180"
@@ -17,6 +53,33 @@
       "state" : {
         "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
         "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e30276bff2ff5ed80566fbdca49f50aa160b0e83"
+      }
+    },
+    {
+      "identity" : "thrappture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/Thrappture",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e6aae00285098bf65c01ac154a677e6679973c11"
+      }
+    },
+    {
+      "identity" : "tuplay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Catterwaul/Tuplay",
+      "state" : {
+        "branch" : "main",
+        "revision" : "05443f2becd263ea57238edf4bdd598a1112313f"
       }
     }
   ],

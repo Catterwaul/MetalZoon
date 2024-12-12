@@ -7,7 +7,7 @@ extension NSObject {
   /// This provides a mechanism to enable leading dot syntax for existentials.
   ///
   /// `ExistentialFactory` inherits `NSObject` in order to conform to `NSObjectProtocol`.
-  /// but is not useful as an object, and should never appear in code, aside from constraining extensions:
+  /// But is not useful as an object, and should never appear in code, aside from constraining extensions:
   /// ```swift
   /// extension SomeNSObjectProtocol where Self == MetalExistentialFactory
   /// ```

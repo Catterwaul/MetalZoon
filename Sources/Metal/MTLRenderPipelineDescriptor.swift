@@ -12,13 +12,13 @@ public extension MTLRenderPipelineDescriptor {
     depthAttachmentPixelFormat: MTLPixelFormat? = nil
   ) {
     self.init()
-    try? self.label = label.wrappedValue()
-    try? self.vertexFunction = vertexFunction.wrappedValue()
-    try? self.fragmentFunction = fragmentFunction.wrappedValue()
-    try? self.maxVertexCallStackDepth = maxVertexCallStackDepth.wrappedValue()
-    try? self.maxFragmentCallStackDepth = maxFragmentCallStackDepth.wrappedValue()
-    try? self.vertexDescriptor = vertexDescriptor.wrappedValue()
+    try? self.label = label.get()
+    try? self.vertexFunction = vertexFunction.get()
+    try? self.fragmentFunction = fragmentFunction.get()
+    try? self.maxVertexCallStackDepth = maxVertexCallStackDepth.get()
+    try? self.maxFragmentCallStackDepth = maxFragmentCallStackDepth.get()
+    try? self.vertexDescriptor = vertexDescriptor.get()
     colorAttachments.indexed().forEach { self.colorAttachments[$0.index] = $0.element }
-    try? self.depthAttachmentPixelFormat = depthAttachmentPixelFormat.wrappedValue()
+    try? self.depthAttachmentPixelFormat = depthAttachmentPixelFormat.get()
   }
 }
