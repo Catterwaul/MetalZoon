@@ -1,24 +1,6 @@
 {
-  "originHash" : "b9596339dc34fbff532948177bcfe2674b10660e4f8ce9e3856352ea06f41741",
+  "originHash" : "8b042210c1b7ef65723db3374656a750ae8a3fc63610df932656c3788c2974d8",
   "pins" : [
-    {
-      "identity" : "simdson",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Catterwaul/SIMDson",
-      "state" : {
-        "branch" : "main",
-        "revision" : "8256ba5a21cba7c202a200bd19629c3bf4db1c75"
-      }
-    },
-    {
-      "identity" : "swift-algorithms",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-algorithms",
-      "state" : {
-        "branch" : "main",
-        "revision" : "34eec0dd27ba4b539fe01e61fac07c9227c65a63"
-      }
-    },
     {
       "identity" : "swift-async-algorithms",
       "kind" : "remoteSourceControl",
