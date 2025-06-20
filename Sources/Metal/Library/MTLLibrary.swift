@@ -1,6 +1,6 @@
 import Metal
 
-public extension MTLLibrary where Self == NSObject.ExistentialFactory {
+public extension MTLLibrary where Self == any MTLLibrary {
   @inlinable static var `default`: any MTLLibrary {
     (.default as any MTLDevice).makeDefaultLibrary()!
   }
