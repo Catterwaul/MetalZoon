@@ -1,7 +1,7 @@
 import typealias Metal.MTLDataType
 
 public extension MTLDataType {
-  init<Data>(_: Data.Type = Data.self) {
+  @inlinable init<Data>(_: Data.Type = Data.self) {
     switch Data.self {
     case is Bool.Type: self.init(Bool.self)
     case is UInt8.Type: self.init(UInt8.self)
@@ -12,23 +12,9 @@ public extension MTLDataType {
     }
   }
 
-  init(_: Bool.Type) {
-    self = .bool
-  }
-
-  init(_: UInt8.Type) {
-    self = .char
-  }
-
-  init(_: SIMD2<UInt8>.Type) {
-    self = .char2
-  }
-
-  init(_: SIMD3<UInt8>.Type) {
-    self = .char3
-  }
-
-  init(_: SIMD4<UInt8>.Type) {
-    self = .char4
-  }
+  @inlinable init(_: Bool.Type) { self = .bool }
+  @inlinable init(_: UInt8.Type) { self = .char }
+  @inlinable init(_: SIMD2<UInt8>.Type) { self = .char2 }
+  @inlinable init(_: SIMD3<UInt8>.Type) { self = .char3 }
+  @inlinable init(_: SIMD4<UInt8>.Type) { self = .char4 }
 }

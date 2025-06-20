@@ -1,7 +1,8 @@
 import Metal
+import Thrappture
 
 public extension MTLRenderPipelineColorAttachmentDescriptor {
-  convenience init(
+  @inlinable convenience init(
     pixelFormat: MTLPixelFormat? = nil,
     writeMask: MTLColorWriteMask? = nil,
     isBlendingEnabled: Bool? = nil,

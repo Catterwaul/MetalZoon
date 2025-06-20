@@ -2,7 +2,7 @@ import Metal
 import Thrappture
 
 public extension MTLFunctionDescriptor {
-  convenience init(
+  @inlinable convenience init(
     name: String? = nil,
     specializedName: String? = nil,
     constantValues: MTLFunctionConstantValues? = nil,

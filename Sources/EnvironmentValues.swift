@@ -3,5 +3,5 @@ import SwiftUI
 
 public extension EnvironmentValues {
   /// The GPU.
-  var metalDevice: any MTLDevice { .default }
+  @inlinable var metalDevice: any MTLDevice { .default }
 }

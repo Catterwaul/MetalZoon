@@ -1,7 +1,8 @@
 import Metal
+import Thrappture
 
 public extension MTLRenderPipelineDescriptor {
-  convenience init(
+  @inlinable convenience init(
     label: String? = nil,
     vertexFunction: (some MTLFunction)? = nil as (any MTLFunction)?,
     fragmentFunction: (some MTLFunction)? = nil as (any MTLFunction)?,
@@ -18,7 +19,7 @@ public extension MTLRenderPipelineDescriptor {
     try? self.maxVertexCallStackDepth = maxVertexCallStackDepth.get()
     try? self.maxFragmentCallStackDepth = maxFragmentCallStackDepth.get()
     try? self.vertexDescriptor = vertexDescriptor.get()
-    colorAttachments.indexed().forEach { self.colorAttachments[$0.index] = $0.element }
+    colorAttachments.enumerated().forEach { self.colorAttachments[$0.offset] = $0.element }
     try? self.depthAttachmentPixelFormat = depthAttachmentPixelFormat.get()
   }
 }
