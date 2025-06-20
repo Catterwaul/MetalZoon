@@ -3,7 +3,7 @@ import AsyncAlgorithms
 import MetalZoon
 import Testing
 
-@Suite struct MTLCommandBufferTests {
+struct MTLCommandBufferTests {
   let device: MTLDevice = .default
 
   @Test func complete() async {
